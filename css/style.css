@@ -1,0 +1,385 @@
+/*Geral*/
+body, ul, li, p{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+
+    background-color: #FDFDFF;
+    font-family: 'Poppins', Arial, Verdana, sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+
+
+
+/*Header*/
+header{
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 16px;
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+
+    box-shadow: 0px -5px 30px #1d0e6213;
+
+    position: fixed;
+    width: 100%;
+    height: 4em;
+    z-index: 1000;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+header .logo{
+    display: flex;
+    align-items: center;
+}
+header .logo img{
+    margin: 4px;
+}
+header #title{
+    width: 10em;
+}
+header #icon{
+    width: 2.25em;
+}
+
+
+header #home-icon{
+    width: 1.5em;
+}
+header .menu{
+    display: flex;
+    background-color: rgba(0, 0, 255, 0);
+}
+header .menu li{
+    margin-left: 25px;   
+    background-color: rgba(0, 0, 255, 0);
+}
+header .menu li a{
+    display: block;
+    padding: 10px;
+    transition-property: all;
+    transition-duration: .2s;
+}
+header .menu li a:hover{
+    letter-spacing: 1px;
+    text-shadow: 0px -5px 20px #1d0e6213;
+    color: #7252f4;
+}
+
+
+
+
+/*Home*/
+#Home{
+    width: 100%;
+    height: 61em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#Home .container{
+    width: 71%;
+    height: 80%;
+    background-color: white;
+    border-radius: 2em;
+    box-shadow: 0px -5px 20px #1d0e6213;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#Home .container .container-elements{
+    padding: 8em;
+}
+
+
+#Home .container .container-elements > h3{
+    font-size: 20px;
+    font-weight: 500;
+    position: absolute;
+
+    letter-spacing: 1px;
+    line-height: 1.25em;
+}
+#Home .container .container-elements h1{
+    font-size: 55px;
+    width: 12em;
+    height: 2em;
+    font-weight: 500;
+
+    letter-spacing: -1px;
+    line-height: 1.25em;
+}
+#Home .container .container-elements #call-button{
+    background-color: #7252f4;
+    box-shadow: 0px -5px 20px #1d0e6213;
+
+    width: 8.5em;
+    height: 2.5em;
+    border-radius: .5em;
+    border: 0;
+
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+    transition-property: all;
+    transition-duration: .5s;
+}
+#Home .container .container-elements #call-button:hover{
+    cursor: pointer;
+    background-color: #6146cf;
+    width: 9em;
+}
+
+
+
+
+/*Serviços*/
+#Servicos{
+    width: 100%;
+    height: 36em;
+    background: rgb(114,82,244);
+    background: linear-gradient(130deg, rgba(114,82,244,1) 54%, rgba(97,70,207,1) 100%);
+}
+#Servicos h2{
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
+    font-size: 27px;
+
+    color: #FDFDFF;
+}
+#Servicos h2 span{
+    color: #A3FDA1
+}
+
+
+#Servicos .containers{
+    display: flex;
+    justify-content: space-around;
+    
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+    margin-top: 4em;
+    gap: 4em;
+}
+
+
+#Servicos .containers #services{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    background-color: #FDFDFF;
+    padding: 1em;
+    border-radius: 2em;
+    box-shadow: 0px -5px 20px #1d0e624b;
+}
+#Servicos .containers #services > img{
+    width: 4em;
+}
+#Servicos .containers #services > h3{
+    width: 9em;
+    font-size: 25px;
+}
+#Servicos .containers #services > h3 span{
+    color: #7252f4;
+}
+#Servicos .containers #services > p{
+    background-color: #ffffff00;
+    font-size: 20px;
+    text-align: justify;
+    width: 15em;
+
+    position: relative;
+    bottom: 1.5em;
+}
+
+
+
+/*Sobre*/
+#Sobre{
+    width: 100%;
+    height: 35em;
+    padding-top: 5em;
+}
+#Sobre .asides{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    padding-left: 16%;
+    padding-right: 16%;
+}
+#Sobre .asides .content h2{
+    font-size: 27px;
+    width: 20em;
+}
+#Sobre .asides .content h2 span{
+    color: #7252f4;
+}
+#Sobre .asides .content p{
+    background-color: #ffffff00;
+    font-size: 20px;
+    text-align: justify;
+    width: 26.75em;
+}
+#Sobre .asides hr{
+    width: 10%;
+    height: .05em;
+    transform: rotate(90deg);
+
+    background-color: #7252f4;
+}
+#Sobre .asides .image img{
+    width: 31em;
+}
+
+
+
+
+/*Equipe*/
+#Equipe{
+    width: 100%;
+    height: 65em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#Equipe h2{
+    font-size: 27px;
+    width: 20em;
+    text-align: center;
+
+    padding: 2em;
+}
+#Equipe h2 span{
+    color: #7252f4;
+}
+#Equipe .pictures{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    gap: 5em;
+    padding-left: 20em;
+    padding-right: 20em;
+}
+#Equipe .pictures .equipe-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#Equipe .pictures .equipe-container h3 span{
+    color: #7252f4;
+}
+#Equipe .pictures .equipe-container h4{
+    position: absolute;
+    margin-top: 17%;
+}
+#Equipe .pictures .equipe-container img{
+    width: 16em;
+    border-radius: 2em;
+    box-shadow: 0px 9px 30px #1d0e621f;
+}
+
+
+
+
+/*Clientes*/
+#Clientes{
+    width: 100%;
+    height: 40em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#Clientes h2{
+    width: 30em;
+    padding-top: 3em;
+    padding-right: 20em;
+}
+#Clientes h2 span{
+    color: #7252f4;
+}
+#Clientes .client-containers{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5em;
+}
+#Clientes .client-containers .client-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #236d5E;
+    width: 35em;
+    height: 20em;
+    border-radius: 2em;
+    box-shadow: 0px 9px 20px #1d0e6241;
+}
+#Clientes .client-containers .client-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #f9e8cc;
+    width: 35em;
+    height: 20em;
+    border-radius: 2em;
+    box-shadow: 0px 9px 20px #1d0e6241;
+}
+
+
+
+
+/*Local*/
+#Local{
+    width: 100%;
+    height: 46em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#Local h2{
+    font-size: 27px;
+}
+#Local h2 span{
+    color: #7252f4;
+}
+#Local p{
+    background-color: #ffffff00;
+    font-size: 20px;
+    text-align: center;
+    width: 28em;
+    padding-top: 1em;
+
+    position: relative;
+    bottom: 1.5em;
+}
+#Local iframe{
+    width: 70%;
+    border-radius: 2em;
+    box-shadow: 0px 9px 20px #1d0e6241;
+}
