@@ -70,7 +70,6 @@ header .menu li a{
     transition-duration: .2s;
 }
 header .menu li a:hover{
-    letter-spacing: 1px;
     text-shadow: 0px -5px 20px #1d0e6213;
     color: #7252f4;
 }
@@ -293,7 +292,7 @@ header .menu li a:hover{
 }
 #Equipe .pictures .equipe-container h4{
     position: absolute;
-    margin-top: 17%;
+    margin-top: 20em;
 }
 #Equipe .pictures .equipe-container img{
     width: 16em;
@@ -361,6 +360,8 @@ header .menu li a:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    padding-bottom: 10em;
 }
 #Local h2{
     font-size: 27px;
@@ -382,4 +383,63 @@ header .menu li a:hover{
     width: 70%;
     border-radius: 2em;
     box-shadow: 0px 9px 20px #1d0e6241;
+}
+
+
+
+
+/*Footer*/
+footer{
+    width: 100%;
+    height: 18em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0px -10px 20px #1d0e6213;
+}
+footer .info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .info .brand{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-right: 3em;
+}
+footer .info .brand #logotipo{
+    width: 20em;
+}
+footer .info .brand #logomarca{
+    width: 4em;
+}
+
+
+footer hr{
+    background-color: black;
+    width: 50em;
+    
+    margin-top: 2em;
+    height: .07em;
+}
+
+
+footer .redes{
+    padding-top: 2em;
+}
+footer .redes .menu{
+    display: flex;
+    justify-content: center;
+    
+    background-color: #00000000;
+}
+footer .redes .menu img{
+    width: 4em;
+    padding-left: 1em;
+    padding-right: 1em;
 }
