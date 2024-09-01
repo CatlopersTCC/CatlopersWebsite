@@ -3,10 +3,10 @@ body, ul, li, p{
     margin: 0px;
     padding: 0px;
     list-style: none;
-
     background-color: #FDFDFF;
     font-family: 'Poppins', Arial, Verdana, sans-serif;
 }
+
 a{
     text-decoration: none;
     color: black;
@@ -14,179 +14,217 @@ a{
     font-size: 16px;
 }
 
-
-
-
 /*Header*/
 header{
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(5.4px);
     -webkit-backdrop-filter: blur(5.4px);
-
     box-shadow: 0px -5px 30px #1d0e6213;
-
     position: fixed;
     width: 100%;
-    height: 4em;
+    height: 6em;
     z-index: 1000;
-
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
+
 header .logo{
     display: flex;
     align-items: center;
 }
+
 header .logo img{
     margin: 4px;
 }
+
 header #title{
     width: 10em;
 }
+
 header #icon{
     width: 2.25em;
 }
 
-
 header #home-icon{
     width: 1.5em;
 }
+
+#home-icon:hover{
+    opacity: 1;
+    content: url('homepagehover.png');
+}
+
 header .menu{
     display: flex;
     background-color: rgba(0, 0, 255, 0);
 }
+
 header .menu li{
     margin-left: 25px;   
     background-color: rgba(0, 0, 255, 0);
 }
+
 header .menu li a{
     display: block;
     padding: 10px;
     transition-property: all;
     transition-duration: .2s;
 }
+
 header .menu li a:hover{
     text-shadow: 0px -5px 20px #1d0e6213;
     color: #7252f4;
+    transition: 400ms;
 }
-
-
-
 
 /*Home*/
 #Home{
     width: 100%;
-    height: 61em;
-
+    height: 180vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
 #Home .container{
-    width: 75%;
-    height: 80%;
+    width: 85%;
+    height: 70%;
     border-radius: 2em;
     box-shadow: 0px -5px 20px #1d0e6213;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     overflow: hidden;
+    position: relative;
 }
-#Home .container video{
-    transform: scale(1.05);
 
-    filter: blur(5px);
+#Home .container video{
+    transform: scale(1);
+    filter: blur(3px);
     overflow: hidden;
+    width: 100%;
+    height: auto;
 }
 
 #Home .container .container-elements{
     position: absolute;
-    padding: 8em;
+    padding: 5vw;
 }
 
-
 #Home .container .container-elements > h3{
-    font-size: 20px;
+    font-size: 1.5vw;
     font-weight: 500;
     position: absolute;
-
     color: #FDFDFF;
     letter-spacing: 1px;
     line-height: 1.25em;
 }
+
 #Home .container .container-elements h1{
-    font-size: 55px;
+    font-size: 4.1vw;
     width: 12em;
     height: 2em;
     font-weight: 500;
-
     color: #FDFDFF;
     letter-spacing: -1px;
     line-height: 1.25em;
 }
+
 #Home .container .container-elements #call-button{
     background-color: #7252f4;
     box-shadow: 0px -5px 20px #1d0e6213;
-
-    width: 8.5em;
-    height: 2.5em;
+    width: 15vw;
+    height: 9vh;
     border-radius: .5em;
     border: 0;
-
     color: white;
-    font-size: 25px;
+    font-size: 1.7vw;
     font-weight: 600;
-
     letter-spacing: 1px;
     transition-property: all;
     transition-duration: .5s;
 }
+
 #Home .container .container-elements #call-button:hover{
     cursor: pointer;
     background-color: #6146cf;
-    width: 9em;
+    width: 15.2vw;
 }
 
+@media (max-width: 768px) {
+    #Home {
+        width: 100%;
+        height: 100vh;
+    }
 
+    #Home .container{
+        margin-top: 5em;
+        width: 85%;
+        height: 65%;
+    }
+    
+    #Home .container .container-elements {
+        padding: 3vw;
+    }
+
+    #Home .container .container-elements > h3 {
+        font-size: 2vw;
+    }
+
+    #Home .container .container-elements h1 {
+        font-size: 6vw;
+    }
+
+    #Home .container .container-elements #call-button {
+        width: 22vw;
+        height: 6vh;
+        font-size: 2.5vw;
+    }
+
+    #Home .container .container-elements #call-button:hover{
+        cursor: pointer;
+        background-color: #6146cf;
+        width: 22.5vw;
+    }
+}
 
 
 /*Serviços*/
 #Servicos{
     width: 100%;
-    height: 36em;
+    height: 42em;
     background: rgb(114,82,244);
     background: linear-gradient(130deg, rgba(114,82,244,1) 54%, rgba(97,70,207,1) 100%);
 }
+
 #Servicos h2{
     display: flex;
     justify-content: center;
     padding-top: 2em;
     font-size: 27px;
-
     color: #FDFDFF;
 }
+
 #Servicos h2 span{
     color: #A3FDA1
 }
 
-
 #Servicos .containers{
     display: flex;
     justify-content: space-around;
-    
     padding-left: 12.5%;
     padding-right: 12.5%;
     margin-top: 4em;
     gap: 4em;
 }
 
+#Serviços .container{
+    transform: translateY(-1%);
+    transition: 400ms;
+}
 
 #Servicos .containers #services{
     display: flex;
@@ -194,115 +232,256 @@ header .menu li a:hover{
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-
     background-color: #FDFDFF;
     padding: 1em;
     border-radius: 2em;
     box-shadow: 0px -5px 20px #1d0e624b;
 }
+
 #Servicos .containers #services > img{
     width: 4em;
 }
+
 #Servicos .containers #services > h3{
     width: 9em;
     font-size: 25px;
 }
+
 #Servicos .containers #services > h3 span{
     color: #7252f4;
 }
+
 #Servicos .containers #services > p{
     background-color: #ffffff00;
     font-size: 20px;
     text-align: justify;
     width: 15em;
-
     position: relative;
     bottom: 1.5em;
 }
 
 
-
 /*Sobre*/
 #Sobre{
     width: 100%;
-    height: 35em;
+    height: auto;
     padding-top: 5em;
 }
+
 #Sobre .asides{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    padding-left: 8%;
+    padding-right: 8%;
+}
 
-    padding-left: 16%;
-    padding-right: 16%;
-}
 #Sobre .asides .content h2{
-    font-size: 27px;
-    width: 20em;
+    width: 90%;
+    margin: 0 auto; 
+    margin-bottom: 1em;
 }
+
 #Sobre .asides .content h2 span{
     color: #7252f4;
 }
+
 #Sobre .asides .content p{
     background-color: #ffffff00;
-    font-size: 20px;
     text-align: justify;
-    width: 26.75em;
+    width: 80%;
+    margin: 0 auto
+
 }
+
 #Sobre .asides hr{
     width: 10%;
     height: .05em;
     transform: rotate(90deg);
-
     background-color: #7252f4;
 }
+
 #Sobre .asides .image img{
     width: 31em;
 }
 
+@media (max-width: 767px) {
 
+    #Sobre .asides .content h2 {
+        width: 90%;
+        text-align: center;
+    }
+
+    #Sobre .asides .content p {
+        width: 90%;
+        font-size: 1.2rem;
+    }
+
+    #Sobre .asides .image img {
+        width: 25em;
+    }
+
+    #Sobre .asides hr{
+        transform: rotate(0);
+        margin-top: 2.5em;
+        width: 10%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1223px){
+
+    #Sobre .asides .content h2 {
+        width: 90%;
+    }
+
+    #Sobre .asides .content p {
+        width: 90%;
+        font-size: 1.2rem;
+    }
+
+    #Sobre .asides .image img {
+        width: 30em;
+        max-width: 35em;
+    }
+
+    #Sobre .asides hr{
+        transform: rotate(0);
+        margin-top: 2.5em;
+        width: 20%;
+    }
+}
+
+@media (min-width: 1224px){
+    #Sobre .asides {
+        flex-direction: row; /* Alterar para linha em telas maiores */
+    }
+
+    #Sobre .asides .content h2 {
+        font-size: 27px;
+        width: 20em;
+    }
+
+    #Sobre .asides .content p {
+        font-size: 20px;
+        width: 26.75em;
+    }
+
+    #Sobre .asides .image img {
+        width: 31em;
+    }
+}
 
 
 /*Equipe*/
-#Equipe{
-    width: 100%;
-    height: 65em;
+#Equipe {
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+}
 
+.pictures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 100%;
+}
+
+.equipe-container {
+    flex: 1 1 30%;
+    max-width: 30%;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 50px;
 }
-#Equipe h2{
-    font-size: 27px;
-    width: 20em;
-    text-align: center;
 
-    padding: 2em;
+.equipe-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
 }
+
+.equipe-container img:hover{
+    transform: translateY(-1%);
+    transition: 400ms;
+}
+
+@media (max-width: 1200px) {
+    .equipe-container {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 800px) {
+    .equipe-container {
+        flex: 1 1 80%;
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 500px) {
+    .equipe-container {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+#Equipe h2 {
+    font-size: 2rem; 
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 2em;
+}
+
+@media (max-width: 1200px) {
+    #Equipe h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 800px) {
+    #Equipe h2 {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 500px) {
+    #Equipe h2 {
+        font-size: 1.6rem;
+    }
+}
+
 #Equipe h2 span{
     color: #7252f4;
 }
+
 #Equipe .pictures{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-    gap: 5em;
-    padding-left: 20em;
-    padding-right: 20em;
 }
+
 #Equipe .pictures .equipe-container{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 #Equipe .pictures .equipe-container h3 span{
     color: #7252f4;
 }
+
 #Equipe .pictures .equipe-container h4{
     position: absolute;
-    margin-top: 20em;
+    margin-top: 19em;
 }
+
 #Equipe .pictures .equipe-container img{
     width: 16em;
     border-radius: 2em;
@@ -310,46 +489,49 @@ header .menu li a:hover{
 }
 
 
-
-
 /*Clientes*/
 #Clientes{
     width: 100%;
     height: 40em;
-
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 #Clientes h2{
-    width: 30em;
-    padding-top: 3em;
-    padding-right: 20em;
+    width: 100%;
+    padding-top: 2em;
+    padding-right: 0em;
+    margin-bottom: 3em;
+    text-align: center;
 }
+
 #Clientes h2 span{
     color: #7252f4;
 }
+
 #Clientes .client-containers{
     display: flex;
     flex-wrap: wrap;
     gap: 5em;
+    justify-content: center;
 }
+
 #Clientes .client-containers .client-1{
     display: flex;
     justify-content: center;
     align-items: center;
-
     background-color: #236d5E;
     width: 35em;
     height: 20em;
     border-radius: 2em;
     box-shadow: 0px 9px 20px #1d0e6241;
 }
+
 #Clientes .client-containers .client-2{
     display: flex;
     justify-content: center;
     align-items: center;
-
     background-color: #f9e8cc;
     width: 35em;
     height: 20em;
@@ -357,110 +539,216 @@ header .menu li a:hover{
     box-shadow: 0px 9px 20px #1d0e6241;
 }
 
+.client-containers .client-1:hover,
+.client-containers .client-2:hover{
+    transform: translateY(-1%);
+    transition: 400ms;
+}
 
+@media (max-width: 767px) {
+    #Clientes h2 {
+        width: 80%;
+        padding-top: 0em;
+    }
+    
+    #Clientes .client-containers {
+        gap: 4em;
+    }
 
+    #Clientes .client-containers .client-1 img{
+        width: 70%;
+        height: 7em;
+    }
+
+    #Clientes .client-containers .client-2 img{
+        width: 70%;
+        height: 13em;
+    }
+
+    #Clientes .client-containers .client-1,
+    #Clientes .client-containers .client-2{
+        width: 80%;
+        height: 17em;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1224px){
+    #Clientes h2 {
+        width: 60%;
+        padding-top: 0em;
+    }
+
+    #Clientes .client-containers {
+        gap: 4em;
+    }
+
+    #Clientes .client-containers .client-1,
+    #Clientes .client-containers .client-2{
+        width: 80%;
+    }
+
+    #Clientes .client-containers .client-1 img{
+        width: 55%;
+        height: 8em;
+    }
+
+    #Clientes .client-containers .client-2 img{
+        width: 50%;
+        height: 15em;
+    }
+}
 
 /*Local*/
-#Local{
+#Local {
     width: 100%;
     height: 46em;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    padding-bottom: 10em;
+    padding-bottom: 5em;
 }
-#Local h2{
+
+#Local h2 {
     font-size: 27px;
 }
-#Local h2 span{
+
+#Local h2 span {
     color: #7252f4;
 }
-#Local p{
+
+#Local p {
     background-color: #ffffff00;
     font-size: 20px;
     text-align: center;
     width: 28em;
     padding-top: 1em;
-
     position: relative;
     bottom: 1.5em;
 }
+
 #Local iframe{
-    width: 70%;
+    width: 80%;
     border-radius: 2em;
     box-shadow: 0px 9px 20px #1d0e6241;
 }
 
+#Local iframe:hover{
+    transform: translateY(-1%);
+    transition: 400ms; 
+}
 
+@media (max-width: 767px) {
+    #Local {
+        height: auto;
+        padding-bottom: 4em;
+        padding-top: 14em;
+    }
 
+    #Local h2 {
+        font-size: 24px;
+    }
+
+    #Local p {
+        width: 90%;
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1224px){
+    #Local {
+        height: auto;
+        padding-bottom: 4em;
+        padding-top: 16em;
+    }
+
+    #Local h2 {
+        font-size: 24px;
+    }
+
+    #Local p {
+        width: 90%;
+        font-size: 18px;
+    }
+}
 
 /*Footer*/
-footer{
+footer {
     width: 100%;
-    height: 18em;
-
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     box-shadow: 0px -10px 20px #1d0e6213;
+    padding-top: 2em;
 }
-footer .info{
+
+footer .info {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-footer .info .brand{
+
+footer .info .brand {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    padding-right: 3em;
-}
-footer .info .brand #logotipo{
-    width: 20em;
-}
-footer .info .brand #logomarca{
-    width: 4em;
+    padding-right: 0;
 }
 
+footer .info .brand #logotipo {
+    width: 100%;
+    max-width: 20em;
+}
 
-footer hr{
+footer .info .brand #logomarca {
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+    width: 100%;
+    max-width: 4em;
+}
+
+footer hr {
     background-color: black;
-    width: 50em;
-    
-    margin-top: 2em;
+    width: 80%;
+    margin:auto;
+    max-width: 50em;
+    margin-top: 1.5em;
     height: .07em;
 }
 
-
-footer .redes{
+footer .redes {
     padding-top: 2em;
 }
-footer .redes .menu{
+
+footer .redes .menu {
     display: flex;
     justify-content: center;
-    
     background-color: #00000000;
 }
-footer .redes .menu img{
-    width: 4em;
-    padding-left: 1em;
-    padding-right: 1em;
+
+footer .redes .menu img {
+    width: 100%;
+    max-width: 4em;
+    padding-right: 1.5em;
+    padding-bottom: 1em;
 }
 
+footer .redes .menu img:hover{
+    transform: translateY(-1%);
+    transition: 400ms;
+}
 
+@media (min-width: 800px) {
+    footer .info {
+        flex-direction: row;
+    }
 
-
-
-
-
-
-
-
-
-
+    footer .info .brand {
+        flex-direction: row;
+    }
+}
