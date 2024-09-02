@@ -83,7 +83,7 @@ header .menu li a:hover{
 /*Home*/
 #Home{
     width: 100%;
-    height: 180vh;
+    height: 170vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,6 +99,11 @@ header .menu li a:hover{
     justify-content: center;
     overflow: hidden;
     position: relative;
+}
+
+#Home .container:hover{
+    transform: translateY(-1%);
+    transition: 400ms;
 }
 
 #Home .container video{
@@ -157,7 +162,7 @@ header .menu li a:hover{
 @media (max-width: 768px) {
     #Home {
         width: 100%;
-        height: 100vh;
+        height: 75vh;
     }
 
     #Home .container{
@@ -200,6 +205,11 @@ header .menu li a:hover{
     background: linear-gradient(130deg, rgba(114,82,244,1) 54%, rgba(97,70,207,1) 100%);
 }
 
+#services:hover{
+    transform: translateY(-1%);
+    transition: 400ms;
+}
+
 #Servicos h2{
     display: flex;
     justify-content: center;
@@ -212,18 +222,13 @@ header .menu li a:hover{
     color: #A3FDA1
 }
 
-#Servicos .containers{
+#Servicos .containers {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     padding-left: 12.5%;
     padding-right: 12.5%;
-    margin-top: 4em;
+    margin: 4em auto;
     gap: 4em;
-}
-
-#Serviços .container{
-    transform: translateY(-1%);
-    transition: 400ms;
 }
 
 #Servicos .containers #services{
@@ -240,6 +245,7 @@ header .menu li a:hover{
 
 #Servicos .containers #services > img{
     width: 4em;
+    padding-top: 1em;
 }
 
 #Servicos .containers #services > h3{
@@ -258,6 +264,66 @@ header .menu li a:hover{
     width: 15em;
     position: relative;
     bottom: 1.5em;
+}
+
+@media (max-width: 767px) {
+    #Servicos {
+        height: auto;
+        padding-bottom: 1em;
+    }
+
+    #Servicos .containers {
+        width: 70%;
+        padding-left: 5%;
+        padding-right: 5%;
+        gap: 5em;
+        flex-direction: column;
+    }
+
+    #Servicos .containers #services > h3 {
+        width: auto;
+        font-size: 20px;
+    }
+
+    #Servicos .containers #services > p {
+        width: auto;
+        font-size: 16px;
+        padding-top: 1em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1124px){
+    #Servicos {
+        height: 55em;
+        padding-bottom: 1em;
+    }
+    
+    #Servicos h2 {
+        font-size: 22px;
+    }
+
+    #Servicos .containers {
+        width: 70%;
+        height: 1em;
+        padding-left: 5%;
+        padding-right: 5%;
+        gap: 4em;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #Servicos .containers #services > img {
+        width: 3em;
+    }
+
+    #Servicos .containers #services > h3 {
+        font-size: 18px;
+    }
+
+    #Servicos .containers #services > p {
+        font-size: 16px;
+        padding-top: 3em;
+    }
 }
 
 
@@ -304,6 +370,11 @@ header .menu li a:hover{
 
 #Sobre .asides .image img{
     width: 31em;
+}
+
+#Sobre .asides .image img:hover{
+    transform: translateY(-1%);
+    transition: 400ms;
 }
 
 @media (max-width: 767px) {
@@ -354,7 +425,7 @@ header .menu li a:hover{
 
 @media (min-width: 1224px){
     #Sobre .asides {
-        flex-direction: row; /* Alterar para linha em telas maiores */
+        flex-direction: row;
     }
 
     #Sobre .asides .content h2 {
