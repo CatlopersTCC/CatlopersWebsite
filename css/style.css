@@ -2,13 +2,13 @@
 body, ul, li, p{
     margin: 0px;
     padding: 0px;
-    list-style: none;
+    list-style: none; /*Retira a marcação de lista*/
     background-color: #FDFDFF;
-    font-family: 'Poppins', Arial, Verdana, sans-serif;
+    font-family: 'Poppins', Arial, Verdana, sans-serif; /*Seleciona a fonte*/
 }
 
 a{
-    text-decoration: none;
+    text-decoration: none; /*Retira o sublinhado*/
     color: black;
     font-weight: 500;
     font-size: 16px;
@@ -16,15 +16,14 @@ a{
 
 /*Header*/
 header{
-    /* From https://css.glass */
     background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(5.4px);
+    backdrop-filter: blur(5.4px); /*Filtro que determina a intensidade do blur*/
     -webkit-backdrop-filter: blur(5.4px);
     box-shadow: 0px -5px 30px #1d0e6213;
-    position: fixed;
+    position: fixed; /*Deixa o elemento fixo na tela*/
     width: 100%;
     height: 6em;
-    z-index: 1000;
+    z-index: 1000; /*Garante que o elemento sempre vai estar na frente de tudo*/
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -53,8 +52,8 @@ header #home-icon{
 }
 
 #home-icon:hover{
-    opacity: 1;
-    content: url('homepagehover.png');
+    opacity: 1; /*Transparência*/
+    content: url('homepagehover.png'); /*Substitui a imagem presente no site, por essa*/
 }
 
 header .menu{
@@ -75,7 +74,7 @@ header .menu li a{
 }
 
 header .menu li a:hover{
-    text-shadow: 0px -5px 20px #1d0e6213;
+    text-shadow: 0px -5px 20px #1d0e6213; /*Sombra no texto*/
     color: #7252f4;
     transition: 400ms;
 }
@@ -83,51 +82,56 @@ header .menu li a:hover{
 /*Home*/
 #Home{
     width: 100%;
-    height: 170vh;
+    height: 170vh; /*Unidade relativa ao height, altura*/
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/*Container com o vídeo dentro*/
 #Home .container{
     width: 85%;
     height: 70%;
     border-radius: 2em;
     box-shadow: 0px -5px 20px #1d0e6213;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
+    flex-direction: column; /*Dispõe os containeres em coluna*/
+    justify-content: center; /*Centraliza*/
+    overflow: hidden; /*Faz com que a barra de rolagem suma*/
     position: relative;
+    margin-top: 7em;
 }
 
 #Home .container:hover{
-    transform: translateY(-1%);
-    transition: 400ms;
+    transform: translateY(-1%); /*Ao passar o mouse, eleva 1% o elemento*/
+    transition: 400ms; /*Tempo de transição*/
 }
 
+/*Vídeo*/
 #Home .container video{
     transform: scale(1);
-    filter: blur(3px);
+    filter: blur(3px); /*Diminuindo a transparência do vídeo*/
     overflow: hidden;
     width: 100%;
-    height: auto;
+    height: auto; /*Torna a altura automática, se adequando conforme o tamanho dos elementos*/
 }
 
 #Home .container .container-elements{
     position: absolute;
-    padding: 5vw;
+    padding: 5vw; /*Unidade relativa ao width, largura*/
 }
 
+/*Título*/
 #Home .container .container-elements > h3{
     font-size: 1.5vw;
-    font-weight: 500;
+    font-weight: 500; /*Negrito*/
     position: absolute;
     color: #FDFDFF;
-    letter-spacing: 1px;
+    letter-spacing: 1px; /*Espaço entre cada letra*/
     line-height: 1.25em;
 }
 
+/*Título principal*/
 #Home .container .container-elements h1{
     font-size: 4.1vw;
     width: 12em;
@@ -138,35 +142,37 @@ header .menu li a:hover{
     line-height: 1.25em;
 }
 
+/*Botão de contato*/
 #Home .container .container-elements #call-button{
     background-color: #7252f4;
     box-shadow: 0px -5px 20px #1d0e6213;
     width: 15vw;
     height: 9vh;
     border-radius: .5em;
-    border: 0;
+    border: 0; /*Retira a borda*/
     color: white;
     font-size: 1.7vw;
     font-weight: 600;
     letter-spacing: 1px;
     transition-property: all;
-    transition-duration: .5s;
+    transition-duration: .5s; /*Define o tempo de duração da transição*/
 }
 
 #Home .container .container-elements #call-button:hover{
-    cursor: pointer;
+    cursor: pointer; /*Adiciona o icone de mãozinha para o cursor*/
     background-color: #6146cf;
     width: 15.2vw;
 }
 
-@media (max-width: 768px) {
+/*Define a responsividade dependendo do tamanho de tela*/
+@media (max-width: 767px) {
     #Home {
         width: 100%;
         height: 75vh;
     }
 
     #Home .container{
-        margin-top: 5em;
+        margin-top: 7em;
         width: 85%;
         height: 65%;
     }
@@ -196,6 +202,43 @@ header .menu li a:hover{
     }
 }
 
+@media (min-width: 768px) and (max-width: 968px){
+    #Home {
+        width: 100%;
+        height: 110vh;
+    }
+
+    #Home .container{
+        margin-top: 7em;
+        width: 85%;
+        height: 75%;
+    }
+    
+    #Home .container .container-elements {
+        padding: 3vw;
+    }
+
+    #Home .container .container-elements > h3 {
+        font-size: 2vw;
+    }
+
+    #Home .container .container-elements h1 {
+        font-size: 6vw;
+    }
+
+    #Home .container .container-elements #call-button {
+        width: 22vw;
+        height: 8vh;
+        font-size: 2.5vw;
+    }
+
+    #Home .container .container-elements #call-button:hover{
+        cursor: pointer;
+        background-color: #6146cf;
+        width: 22.5vw;
+    }
+}
+
 
 /*Serviços*/
 #Servicos{
@@ -210,11 +253,12 @@ header .menu li a:hover{
     transition: 400ms;
 }
 
+/*Título centralizado*/
 #Servicos h2{
     display: flex;
     justify-content: center;
     padding-top: 2em;
-    font-size: 27px;
+    font-size: 27px; /*Tamanho de fonte*/
     color: #FDFDFF;
 }
 
@@ -222,20 +266,22 @@ header .menu li a:hover{
     color: #A3FDA1
 }
 
+/*Cards*/
 #Servicos .containers {
     display: flex;
     justify-content: center;
     padding-left: 12.5%;
     padding-right: 12.5%;
     margin: 4em auto;
-    gap: 4em;
+    gap: 4em; /*Espaçamento entre um e outro contâiner*/
 }
 
+/*Conteúdo dos cards*/
 #Servicos .containers #services{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*Dispõe os elementos em linhas*/
     gap: 20px;
     background-color: #FDFDFF;
     padding: 1em;
@@ -243,11 +289,13 @@ header .menu li a:hover{
     box-shadow: 0px -5px 20px #1d0e624b;
 }
 
+/*Imagens acima dos textos*/
 #Servicos .containers #services > img{
     width: 4em;
     padding-top: 1em;
 }
 
+/*Título*/
 #Servicos .containers #services > h3{
     width: 9em;
     font-size: 25px;
@@ -257,10 +305,11 @@ header .menu li a:hover{
     color: #7252f4;
 }
 
+/*Texto*/
 #Servicos .containers #services > p{
     background-color: #ffffff00;
     font-size: 20px;
-    text-align: justify;
+    text-align: justify; /*Justifica o texto*/
     width: 15em;
     position: relative;
     bottom: 1.5em;
@@ -294,7 +343,7 @@ header .menu li a:hover{
 
 @media (min-width: 768px) and (max-width: 1124px){
     #Servicos {
-        height: 55em;
+        height: 63em;
         padding-bottom: 1em;
     }
     
@@ -334,15 +383,17 @@ header .menu li a:hover{
     padding-top: 5em;
 }
 
+/*Contâiner com a imagem e os textos*/
 #Sobre .asides{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-evenly; /*Dispõe os elementos de forma espaçada igualmente e sem tocar nas bordas*/
     padding-left: 8%;
     padding-right: 8%;
 }
 
+/*Título*/
 #Sobre .asides .content h2{
     width: 90%;
     margin: 0 auto; 
@@ -350,24 +401,26 @@ header .menu li a:hover{
 }
 
 #Sobre .asides .content h2 span{
-    color: #7252f4;
+    color: #7252f4; /*Cor da fonte*/
 }
 
+/*Texto*/
 #Sobre .asides .content p{
     background-color: #ffffff00;
     text-align: justify;
     width: 80%;
     margin: 0 auto
-
 }
 
+/*Linha vertical dividindo o texto da imagem*/
 #Sobre .asides hr{
     width: 10%;
     height: .05em;
-    transform: rotate(90deg);
+    transform: rotate(90deg); /*Rotacionando a linha originalmente horizontal para vertical*/
     background-color: #7252f4;
 }
 
+/*Imagem à direita do texto*/
 #Sobre .asides .image img{
     width: 31em;
 }
@@ -378,6 +431,9 @@ header .menu li a:hover{
 }
 
 @media (max-width: 767px) {
+    #Sobre{
+        padding-bottom: 1em;
+    }
 
     #Sobre .asides .content h2 {
         width: 90%;
@@ -394,13 +450,16 @@ header .menu li a:hover{
     }
 
     #Sobre .asides hr{
-        transform: rotate(0);
+        transform: rotate(0); /*Retornando ao original de uma hr, que é uma linha horizontal*/
         margin-top: 2.5em;
         width: 10%;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1223px){
+    #Sobre{
+        padding-bottom: 1em;
+    }
 
     #Sobre .asides .content h2 {
         width: 90%;
@@ -424,8 +483,12 @@ header .menu li a:hover{
 }
 
 @media (min-width: 1224px){
+    #Sobre{
+        padding-bottom: 1em;
+    }
+
     #Sobre .asides {
-        flex-direction: row;
+        flex-direction: row; /*Dispõe os elementos em linhas*/
     }
 
     #Sobre .asides .content h2 {
@@ -451,16 +514,18 @@ header .menu li a:hover{
     overflow: hidden;
 }
 
+/*Configuração das fotos*/
 .pictures {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    max-width: 100%;
+    max-width: 100%; /*Limita o tamanho para não exceder o tamanho da tela*/
 }
 
+/*Cards*/
 .equipe-container {
-    flex: 1 1 30%;
+    flex: 1 1 30%; /*Disposição dos elementos*/
     max-width: 30%;
     text-align: center;
     display: flex;
@@ -501,6 +566,7 @@ header .menu li a:hover{
     }
 }
 
+/*Título*/
 #Equipe h2 {
     font-size: 2rem; 
     width: 100%;
@@ -508,6 +574,39 @@ header .menu li a:hover{
     padding: 0;
     margin: 0 auto;
     margin-bottom: 2em;
+}
+
+#Equipe h2 span{
+    color: #7252f4;
+}
+
+#Equipe .pictures{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /*Espaçamento igual entre os elementos*/
+}
+
+#Equipe .pictures .equipe-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Nome do integrante*/
+#Equipe .pictures .equipe-container h3 span{
+    color: #7252f4;
+}
+
+/*Função na empresa*/
+#Equipe .pictures .equipe-container h4{
+    position: absolute;
+    margin-top: 19em;
+}
+
+#Equipe .pictures .equipe-container img{
+    width: 16em;
+    border-radius: 2em;
+    box-shadow: 0px 9px 30px #1d0e621f;
 }
 
 @media (max-width: 1200px) {
@@ -528,59 +627,30 @@ header .menu li a:hover{
     }
 }
 
-#Equipe h2 span{
-    color: #7252f4;
-}
-
-#Equipe .pictures{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-#Equipe .pictures .equipe-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#Equipe .pictures .equipe-container h3 span{
-    color: #7252f4;
-}
-
-#Equipe .pictures .equipe-container h4{
-    position: absolute;
-    margin-top: 19em;
-}
-
-#Equipe .pictures .equipe-container img{
-    width: 16em;
-    border-radius: 2em;
-    box-shadow: 0px 9px 30px #1d0e621f;
-}
-
 
 /*Clientes*/
 #Clientes{
     width: 100%;
-    height: 40em;
+    height: 36em;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/*Título*/
 #Clientes h2{
     width: 100%;
     padding-top: 2em;
     padding-right: 0em;
     margin-bottom: 3em;
-    text-align: center;
+    text-align: center; /*Centraliza o texto*/
 }
 
 #Clientes h2 span{
     color: #7252f4;
 }
 
+/*Cards*/
 #Clientes .client-containers{
     display: flex;
     flex-wrap: wrap;
@@ -588,6 +658,7 @@ header .menu li a:hover{
     justify-content: center;
 }
 
+/*Health Treats*/
 #Clientes .client-containers .client-1{
     display: flex;
     justify-content: center;
@@ -596,9 +667,10 @@ header .menu li a:hover{
     width: 35em;
     height: 20em;
     border-radius: 2em;
-    box-shadow: 0px 9px 20px #1d0e6241;
+    box-shadow: 0px 9px 20px #1d0e6241; /*Sombra do contâiner*/
 }
 
+/*Arriba*/
 #Clientes .client-containers .client-2{
     display: flex;
     justify-content: center;
@@ -610,6 +682,7 @@ header .menu li a:hover{
     box-shadow: 0px 9px 20px #1d0e6241;
 }
 
+/*Manipulando a animação das classes de forma conjunta*/
 .client-containers .client-1:hover,
 .client-containers .client-2:hover{
     transform: translateY(-1%);
@@ -617,6 +690,10 @@ header .menu li a:hover{
 }
 
 @media (max-width: 767px) {
+    #Clientes{
+        height: 40em;
+    }
+
     #Clientes h2 {
         width: 80%;
         padding-top: 0em;
@@ -645,6 +722,11 @@ header .menu li a:hover{
 }
 
 @media (min-width: 768px) and (max-width: 1224px){
+    #Clientes{
+        height: 40em;
+    }
+          
+    
     #Clientes h2 {
         width: 60%;
         padding-top: 0em;
@@ -681,6 +763,7 @@ header .menu li a:hover{
     padding-bottom: 5em;
 }
 
+/*Título*/
 #Local h2 {
     font-size: 27px;
 }
@@ -689,6 +772,7 @@ header .menu li a:hover{
     color: #7252f4;
 }
 
+/*Texto*/
 #Local p {
     background-color: #ffffff00;
     font-size: 20px;
@@ -699,12 +783,14 @@ header .menu li a:hover{
     bottom: 1.5em;
 }
 
+/*Mapa Google*/
 #Local iframe{
-    width: 80%;
+    width: 70%;
     border-radius: 2em;
     box-shadow: 0px 9px 20px #1d0e6241;
 }
 
+/*Animação do mapa*/
 #Local iframe:hover{
     transform: translateY(-1%);
     transition: 400ms; 
@@ -756,6 +842,7 @@ footer {
     padding-top: 2em;
 }
 
+/*Contâiner*/
 footer .info {
     display: flex;
     flex-direction: column;
@@ -763,6 +850,7 @@ footer .info {
     align-items: center;
 }
 
+/*Texto de copyright*/
 footer .info .brand {
     display: flex;
     flex-direction: column;
@@ -771,11 +859,13 @@ footer .info .brand {
     padding-right: 0;
 }
 
+/*Logo Catlopers*/
 footer .info .brand #logotipo {
     width: 100%;
     max-width: 20em;
 }
 
+/*Logo ponto e vírgula*/
 footer .info .brand #logomarca {
     padding-top: 1.5em;
     padding-bottom: 1em;
@@ -783,8 +873,9 @@ footer .info .brand #logomarca {
     max-width: 4em;
 }
 
+/*Linha acima dos ícones*/
 footer hr {
-    background-color: black;
+    background-color: #131414;
     width: 80%;
     margin:auto;
     max-width: 50em;
@@ -792,16 +883,18 @@ footer hr {
     height: .07em;
 }
 
+/*Espaçamento entre a logo e os ícones*/
 footer .redes {
     padding-top: 2em;
 }
 
+/*Contâiner dos ícones*/
 footer .redes .menu {
     display: flex;
     justify-content: center;
-    background-color: #00000000;
 }
 
+/*Ícones*/
 footer .redes .menu img {
     width: 100%;
     max-width: 4em;
