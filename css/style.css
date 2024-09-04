@@ -22,7 +22,7 @@ header{
     box-shadow: 0px -5px 30px #1d0e6213;
     position: fixed; /*Deixa o elemento fixo na tela*/
     width: 100%;
-    height: 6em;
+    height: 7em;
     z-index: 1000; /*Garante que o elemento sempre vai estar na frente de tudo*/
     display: flex;
     flex-wrap: wrap;
@@ -81,10 +81,15 @@ header .menu li a:hover{
 
 @media (max-width: 509px){
     header .logo img{
-        padding-top: 1em;
+        padding-top: .8em;
     }
 }
 
+@media (min-width: 510px) and (max-width: 768px){
+    header .logo img{
+        padding-top: .8em;
+    }
+}
 
 /*Home*/
 #Home{
@@ -287,7 +292,7 @@ header .menu li a:hover{
 /*Serviços*/
 #Servicos{
     width: 100%;
-    height: 42em;
+    height: 50em;
     background: rgb(114,82,244);
     background: linear-gradient(130deg, rgba(114,82,244,1) 54%, rgba(97,70,207,1) 100%);
 }
@@ -302,7 +307,7 @@ header .menu li a:hover{
     display: flex;
     justify-content: center;
     padding-top: 2em;
-    font-size: 27px; /*Tamanho de fonte*/
+    font-size: 2em; /*Tamanho de fonte*/
     color: #FDFDFF;
 }
 
@@ -328,7 +333,7 @@ header .menu li a:hover{
     flex-wrap: wrap; /*Dispõe os elementos em linhas*/
     gap: 20px;
     background-color: #FDFDFF;
-    padding: 1em;
+    padding: 1.5em;
     border-radius: 2em;
     box-shadow: 0px -5px 20px #1d0e624b;
 }
@@ -365,10 +370,6 @@ header .menu li a:hover{
         padding-bottom: 1em;
     }
 
-    #Servicos h2 {
-        font-size: 20px;
-    }
-
     #Servicos .containers {
         width: 70%;
         padding-left: 5%;
@@ -379,7 +380,7 @@ header .menu li a:hover{
 
     #Servicos .containers #services > h3 {
         width: auto;
-        font-size: 15px;
+        font-size: 20px;
     }
 
     #Servicos .containers #services > p {
@@ -395,30 +396,8 @@ header .menu li a:hover{
         padding-bottom: 1em;
     }
 
-    #Servicos .containers {
-        width: 70%;
-        padding-left: 5%;
-        padding-right: 5%;
-        gap: 5em;
-        flex-direction: column;
-    }
-
-    #Servicos .containers #services > h3 {
-        width: auto;
-        font-size: 20px;
-    }
-
-    #Servicos .containers #services > p {
-        width: auto;
-        font-size: 16px;
-        padding-top: 1em;
-    }
-}
-
-@media (max-width: 767px) {
-    #Servicos {
-        height: auto;
-        padding-bottom: 1em;
+    #Servicos h2 {
+        font-size: 2em;
     }
 
     #Servicos .containers {
@@ -443,7 +422,7 @@ header .menu li a:hover{
 
 @media (min-width: 768px) and (max-width: 1124px){
     #Servicos {
-        height: 63em;
+        height: 76em;
         padding-bottom: 1em;
     }
     
