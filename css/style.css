@@ -165,7 +165,44 @@ header .menu li a:hover{
 }
 
 /*Define a responsividade dependendo do tamanho de tela*/
-@media (max-width: 767px) {
+@media (max-width: 509px) {
+    #Home {
+        width: 100%;
+        height: 55vh;
+    }
+
+    #Home .container{
+        margin-top: 7em;
+        width: 85%;
+        height: 65%;
+    }
+    
+    #Home .container .container-elements {
+        padding: 3vw;
+    }
+
+    #Home .container .container-elements > h3 {
+        font-size: 2.5vw;
+    }
+
+    #Home .container .container-elements h1 {
+        font-size: 7vw;
+    }
+
+    #Home .container .container-elements #call-button {
+        width: 24vw;
+        height: 4vh;
+        font-size: 2.5vw;
+    }
+
+    #Home .container .container-elements #call-button:hover{
+        cursor: pointer;
+        background-color: #6146cf;
+        width: 24.5vw;
+    }
+}
+
+@media (min-width: 510px) and (max-width: 767px) {
     #Home {
         width: 100%;
         height: 75vh;
@@ -182,11 +219,11 @@ header .menu li a:hover{
     }
 
     #Home .container .container-elements > h3 {
-        font-size: 2vw;
+        font-size: 2.5vw;
     }
 
     #Home .container .container-elements h1 {
-        font-size: 6vw;
+        font-size: 7vw;
     }
 
     #Home .container .container-elements #call-button {
@@ -313,6 +350,62 @@ header .menu li a:hover{
     width: 15em;
     position: relative;
     bottom: 1.5em;
+}
+
+@media (max-width: 509px) {
+    #Servicos {
+        height: auto;
+        padding-bottom: 1em;
+    }
+
+    #Servicos h2 {
+        font-size: 20px;
+    }
+
+    #Servicos .containers {
+        width: 70%;
+        padding-left: 5%;
+        padding-right: 5%;
+        gap: 5em;
+        flex-direction: column;
+    }
+
+    #Servicos .containers #services > h3 {
+        width: auto;
+        font-size: 15px;
+    }
+
+    #Servicos .containers #services > p {
+        width: auto;
+        font-size: 16px;
+        padding-top: 1em;
+    }
+}
+
+@media (min-width: 510px) and (max-width: 767px) {
+    #Servicos {
+        height: auto;
+        padding-bottom: 1em;
+    }
+
+    #Servicos .containers {
+        width: 70%;
+        padding-left: 5%;
+        padding-right: 5%;
+        gap: 5em;
+        flex-direction: column;
+    }
+
+    #Servicos .containers #services > h3 {
+        width: auto;
+        font-size: 20px;
+    }
+
+    #Servicos .containers #services > p {
+        width: auto;
+        font-size: 16px;
+        padding-top: 1em;
+    }
 }
 
 @media (max-width: 767px) {
