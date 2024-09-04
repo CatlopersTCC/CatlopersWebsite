@@ -79,6 +79,13 @@ header .menu li a:hover{
     transition: 400ms;
 }
 
+@media (max-width: 509px){
+    header .logo img{
+        padding-top: 1em;
+    }
+}
+
+
 /*Home*/
 #Home{
     width: 100%;
