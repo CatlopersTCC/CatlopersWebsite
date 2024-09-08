@@ -7,6 +7,7 @@ body, ul, li, p{
     font-family: 'Poppins', Arial, Verdana, sans-serif; /*Seleciona a fonte*/
 }
 
+/*Links*/
 a{
     text-decoration: none; /*Retira o sublinhado*/
     color: black;
@@ -30,6 +31,7 @@ header{
     align-items: center;
 }
 
+/*Logos da empresa*/
 header .logo{
     display: flex;
     align-items: center;
@@ -43,6 +45,7 @@ header #title{
     width: 10em;
 }
 
+/*Ícone da Home*/
 header #icon{
     width: 2.25em;
 }
@@ -980,8 +983,9 @@ footer .redes .menu {
 /*Ícones*/
 footer .redes .menu img {
     width: 100%;
-    max-width: 4em;
-    padding-right: 1.5em;
+    max-width: 4em; /*Limita o tamanho do elemento*/
+    padding-right: .5em;
+    padding-left: .5em;
     padding-bottom: 1em;
 }
 
@@ -991,6 +995,14 @@ footer .redes .menu img:hover{
 }
 
 @media (min-width: 800px) {
+    footer .redes .menu img {
+        width: 100%;
+        max-width: 4em;
+        padding-right: 1em;
+        padding-left: 1em;
+        padding-bottom: 1em;
+    }
+    
     footer .info {
         flex-direction: row;
     }
