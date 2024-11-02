@@ -1,3 +1,24 @@
+/*Animação suave de transição entre seções*/
+html{
+    scroll-behavior: smooth;
+}
+
+/*Alterando tamanho da barra de rolagem*/
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+/*Cor padrão da barra de rolagem*/
+::-webkit-scrollbar-thumb {
+    background: #a18afd;
+    border-radius: 10px;
+}
+
+/*Cor ao usuário passar o mouse por cima*/
+::-webkit-scrollbar-thumb:hover {
+    background: #7252f4;
+}       
+
 /*Geral*/
 body, ul, li, p{
     margin: 0px;
