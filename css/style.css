@@ -103,6 +103,12 @@ header .menu li a:hover{
     transition: 400ms;
 }
 
+header .menu li a:not(:hover){
+    text-shadow: 0px -5px 20px #1d0e6213; /*Sombra no texto*/
+    color: #000000;
+    transition: 400ms;
+}
+
 @media (max-width: 509px){
     header .logo img{
         padding-top: .8em;
@@ -118,7 +124,7 @@ header .menu li a:hover{
 /*Home*/
 #Home{
     width: 100%;
-    height: 170vh; /*Unidade relativa ao height, altura*/
+    height: 140vh; /*Unidade relativa ao height, altura*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -127,7 +133,7 @@ header .menu li a:hover{
 /*Container com o vídeo dentro*/
 #Home .container{
     width: 85%;
-    height: 70%;
+    height: 80%;
     border-radius: 2em;
     box-shadow: 0px -5px 20px #1d0e6213;
     display: flex;
@@ -135,13 +141,18 @@ header .menu li a:hover{
     justify-content: center; /*Centraliza*/
     overflow: hidden; /*Faz com que a barra de rolagem suma*/
     position: relative;
-    margin-top: 7em;
+    margin-top: 4em;
 }
 
 #Home .container:hover{
     transform: translateY(-1%); /*Ao passar o mouse, eleva 1% o elemento*/
     transition: 400ms; /*Tempo de transição*/
 }
+
+#Home .container:not(:hover){
+    transition: 400ms; /*Tempo de transição*/
+}
+
 
 /*Vídeo*/
 #Home .container video{
@@ -198,6 +209,10 @@ header .menu li a:hover{
     cursor: pointer; /*Adiciona o icone de mãozinha para o cursor*/
     background-color: #6146cf;
     width: 15.2vw;
+}
+
+#Home .container .container-elements #call-button:not(:hover){
+    background-color: #7252f4;
 }
 
 /*Define a responsividade dependendo do tamanho de tela*/
@@ -326,6 +341,10 @@ header .menu li a:hover{
     transition: 400ms;
 }
 
+#services:not(:hover){
+    transition: 400ms;
+}
+
 /*Título centralizado*/
 #Servicos h2{
     display: flex;
@@ -365,7 +384,6 @@ header .menu li a:hover{
 /*Imagens acima dos textos*/
 #Servicos .containers #services > img{
     width: 4em;
-    padding-top: 1em;
 }
 
 /*Título*/
@@ -414,6 +432,10 @@ header .menu li a:hover{
     #Servicos .containers #services > p {
         width: auto;
         font-size: 16px;
+        padding-top: 1em;
+    }
+    #Servicos .containers #services > img{
+        width: 4em;
         padding-top: 1em;
     }
 }
@@ -537,6 +559,10 @@ header .menu li a:hover{
     transition: 400ms;
 }
 
+#Sobre .asides .image img:not(:hover){
+    transition: 400ms;
+}
+
 @media (max-width: 767px) {
     #Sobre{
         padding-bottom: 1em;
@@ -651,6 +677,11 @@ header .menu li a:hover{
     transform: translateY(-1%);
     transition: 400ms;
 }
+
+.equipe-container img:not(:hover){
+    transition: 400ms;
+}
+
 
 @media (max-width: 1200px) {
     .equipe-container {
@@ -796,6 +827,11 @@ header .menu li a:hover{
     transition: 400ms;
 }
 
+.client-containers .client-1:not(:hover),
+.client-containers .client-2:not(:hover){
+    transition: 400ms;
+}
+
 @media (max-width: 767px) {
     #Clientes{
         height: 40em;
@@ -811,12 +847,12 @@ header .menu li a:hover{
     }
 
     #Clientes .client-containers .client-1 img{
-        width: 70%;
+        width: 60%;
         height: 7em;
     }
 
     #Clientes .client-containers .client-2 img{
-        width: 70%;
+        width: 60%;
         height: 13em;
     }
 
