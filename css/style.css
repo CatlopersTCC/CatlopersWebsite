@@ -122,6 +122,9 @@ header .menu li a:not(:hover){
     header .menu li a{
         padding: 0px;
     }
+    a{
+    font-size: 13px;
+}
 }
 
 @media (min-width: 510px) and (max-width: 968px){
