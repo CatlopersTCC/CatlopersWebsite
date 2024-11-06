@@ -115,6 +115,22 @@ header .menu li a:not(:hover){
     transition: 400ms;
 }
 
+@media (min-width: 311px)and (max-width: 509px){
+    header .logo img{
+        padding-top: .8em;
+    }
+    header .menu li a{
+        padding: 8px;
+    }
+    header .menu li{
+        margin-left: 5px;   
+        background-color: rgba(0, 0, 255, 0);
+    }
+    a{
+    font-size: 12px;
+    }
+}
+
 @media (max-width: 509px){
     header .logo img{
         padding-top: .8em;
@@ -128,7 +144,7 @@ header .menu li a:not(:hover){
     }
     a{
     font-size: 14px;
-}
+    }
 }
 
 @media (min-width: 510px) and (max-width: 968px){
