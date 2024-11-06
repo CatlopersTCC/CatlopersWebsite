@@ -122,8 +122,12 @@ header .menu li a:not(:hover){
     header .menu li a{
         padding: 0px;
     }
+    header .menu li{
+        margin-left: 15px;   
+        background-color: rgba(0, 0, 255, 0);
+    }
     a{
-    font-size: 13px;
+    font-size: 15px;
 }
 }
 
