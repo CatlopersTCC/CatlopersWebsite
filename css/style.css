@@ -867,13 +867,13 @@ header .menu li a:not(:hover){
     }
 
     #Clientes .client-containers .client-1 img{
-        width: 60%;
-        height: 7em;
+        width: 50%;
+        height: 6em;
     }
 
     #Clientes .client-containers .client-2 img{
-        width: 60%;
-        height: 13em;
+        width: 50%;
+        height: 10em;
     }
 
     #Clientes .client-containers .client-1,
